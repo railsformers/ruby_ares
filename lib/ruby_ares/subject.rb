@@ -1,3 +1,5 @@
+require 'ostruct'
+
 module RubyAres
   class Subject
     BASE_URL = 'https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty'.freeze
