@@ -2,7 +2,7 @@
 
 Gem for accesing business information from ARES database. This gem is based on [ruby-ares](https://github.com/strzibny/ruby-ares) .
 
-This gem is not implementing whole ARES API, only the part that allow to get information about company. If you need more functionality, feel free to contribute or use an [API directly]().
+This gem is not implementing whole ARES API, only the part that allow to get information about company. If you need more functionality, feel free to contribute or use an [API directly](https://ares.gov.cz/stranky/vyvojar-info).
 
 ## Installation
 
