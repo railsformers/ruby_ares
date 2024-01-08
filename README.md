@@ -1,24 +1,45 @@
-# RubyAres
+# ruby_ares
 
-TODO: Delete this and the text below, and describe your gem
+Gem for accesing business information from ARES database. This gem is based on [ruby-ares](https://github.com/strzibny/ruby-ares) .
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ruby_ares`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is not implementing whole ARES API, only the part that allow to get information about company. If you need more functionality, feel free to contribute or use an [API directly]().
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Add this line to your application's Gemfile:
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+```ruby
+gem "ruby_ares", "~> 0.1.0", github: "railsformers/ruby_ares"
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+To get ARES information about a company, use the `Ares` class:
+
+```ruby
+  subject = RubyAres::Subject.get("24704440")
+```
+
+The `subject` object will contain all the information about the company. Check ARES docs for object structure: [DOCS](https://ares.gov.cz/swagger-ui/#/ekonomicke-subjekty/vratEkonomickySubjekt)
+
+Return data is default type of `OpenStruct`. If you prefer `Hash` type, you can use
+```ruby
+  subject = RubyAres::Subject.get("24704440", Hash)
+```
+
+### Exceptions
+
+In case of an error, the `Ares` class will raise an `RubyAres::Error` exception. The exception will contain the error message from ARES, response status, type and response.
+
+```ruby
+  begin
+    subject = RubyAres::Subject.get("non-existing")
+  rescue RubyAres::Error => e
+    puts e.status
+    puts e.type
+    puts e.response
+  end
+```
 
 ## Development
 

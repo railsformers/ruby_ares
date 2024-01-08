@@ -3,14 +3,14 @@ module RubyAres
     BASE_URL = 'https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty'.freeze
 
     class << self
-      def get(ico, response_class = OpenStruct)
+      def get(ico, object_class = OpenStruct)
         uri = URI("#{BASE_URL}/#{ico}")
 
         response = Net::HTTP.get_response(uri)
 
         case response
         when Net::HTTPSuccess then
-          JSON.parse(response.body, object_class: response_class)
+          JSON.parse(response.body, object_class: object_class)
         when Net::HTTPRedirection then
           location = response['location']
           warn "redirected to #{location}"
