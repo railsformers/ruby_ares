@@ -91,6 +91,13 @@ In case of an error, the `Ares` class will raise an `RubyAres::Error` exception.
   end
 ```
 
+## Migrate from ruby-ares
+
+* rename `RubyARES` to `RubyAres`
+* rename `RubyARES::Parser::ARESDatabaseError` and `RubyARES::Parser::ParseError` to `RubyAres::Error`
+* adjust `subject.attribute` calls to new structure
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
