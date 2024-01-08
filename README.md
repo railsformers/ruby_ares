@@ -27,6 +27,56 @@ Return data is default type of `OpenStruct`. If you prefer `Hash` type, you can 
   subject = RubyAres::Subject.get("24704440", Hash)
 ```
 
+```ruby
+{
+  "ico"=>"24704440",
+  "obchodniJmeno"=>"Railsformers s.r.o.",
+  "sidlo"=>
+   {"kodStatu"=>"CZ",
+    "nazevStatu"=>"Česká republika",
+    "kodKraje"=>132,
+    "nazevKraje"=>"Moravskoslezský kraj",
+    "kodOkresu"=>3807,
+    "nazevOkresu"=>"Ostrava-město",
+    "kodObce"=>554821,
+    "nazevObce"=>"Ostrava",
+    "kodMestskeCastiObvodu"=>546224,
+    "kodUlice"=>367664,
+    "nazevMestskeCastiObvodu"=>"Poruba",
+    "nazevUlice"=>"Vřesinská",
+    "cisloDomovni"=>2371,
+    "kodCastiObce"=>414085,
+    "cisloOrientacni"=>33,
+    "nazevCastiObce"=>"Poruba",
+    "kodAdresnihoMista"=>73387169,
+    "psc"=>70800,
+    "textovaAdresa"=>"Vřesinská 2371/33, Poruba, 70800 Ostrava"},
+  "pravniForma"=>"112",
+  "datumVzniku"=>"2010-06-30",
+  "datumAktualizace"=>"2023-12-06",
+  "dic"=>"CZ24704440",
+  "icoId"=>"24704440",
+  "adresaDorucovaci"=>{},
+  "seznamRegistraci"=>
+   {"stavZdrojeVr"=>"AKTIVNI",
+    "stavZdrojeRes"=>"AKTIVNI",
+    "stavZdrojeRzp"=>"AKTIVNI",
+    "stavZdrojeNrpzs"=>"NEEXISTUJICI",
+    "stavZdrojeRpsh"=>"NEEXISTUJICI",
+    "stavZdrojeRcns"=>"NEEXISTUJICI",
+    "stavZdrojeSzr"=>"NEEXISTUJICI",
+    "stavZdrojeDph"=>"AKTIVNI",
+    "stavZdrojeSd"=>"NEEXISTUJICI",
+    "stavZdrojeIr"=>"NEEXISTUJICI",
+    "stavZdrojeCeu"=>"NEEXISTUJICI",
+    "stavZdrojeRs"=>"NEEXISTUJICI",
+    "stavZdrojeRed"=>"NEEXISTUJICI"},
+  "primarniZdroj"=>"vr",
+  "czNace"=>["00", "6820"],
+  "dicSkDph"=>"N/A"
+ }
+```
+
 ### Exceptions
 
 In case of an error, the `Ares` class will raise an `RubyAres::Error` exception. The exception will contain the error message from ARES, response status, type and response.
