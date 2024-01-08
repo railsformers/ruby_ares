@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "ruby_ares/version"
+require_relative "ruby_ares/subject"
 
 module RubyAres
   class Error < StandardError
