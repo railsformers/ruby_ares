@@ -7,7 +7,7 @@ RSpec.describe RubyAres::Subject do
 
   describe 'get' do
     before do
-      stub_request(:get, "#{RubyAres::Subject::BASE_URL}/#{ico}")
+      stub_request(:get, "#{RubyAres::Subject.base_url}/#{ico}")
         .to_return(
           body:
           {

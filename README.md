@@ -9,7 +9,7 @@ This gem is not implementing whole ARES API, only the part that allow to get inf
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "ruby_ares", "~> 0.1.0", github: "railsformers/ruby_ares"
+gem "ruby_ares", "~> 0.2.0", github: "railsformers/ruby_ares"
 ```
 
 ## Usage
@@ -75,6 +75,13 @@ Return data is default type of `OpenStruct`. If you prefer `Hash` type, you can 
   "czNace"=>["00", "6820"],
   "dicSkDph"=>"N/A"
  }
+```
+
+To get ARES information about a company in more detail, use the `PublicRegister` class:
+
+```ruby
+  response = RubyAres::PublicRegister.get("24704440")
+  file_mark(response) # use of file mark parser
 ```
 
 ### Exceptions
