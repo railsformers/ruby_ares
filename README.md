@@ -9,7 +9,7 @@ This gem is not implementing whole ARES API, only the part that allow to get inf
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "ruby_ares", "~> 0.2.0", github: "railsformers/ruby_ares"
+gem "ruby_ares", "~> 0.3.0", github: "railsformers/ruby_ares"
 ```
 
 ## Usage
@@ -23,6 +23,7 @@ To get ARES information about a company, use the `Ares` class:
 The `subject` object will contain all the information about the company. Check ARES docs for object structure: [DOCS](https://ares.gov.cz/swagger-ui/#/ekonomicke-subjekty/vratEkonomickySubjekt)
 
 Return data is default type of `OpenStruct`. If you prefer `Hash` type, you can use
+
 ```ruby
   subject = RubyAres::Subject.get("24704440", Hash)
 ```
@@ -100,10 +101,9 @@ In case of an error, the `Ares` class will raise an `RubyAres::Error` exception.
 
 ## Migrate from ruby-ares
 
-* rename `RubyARES` to `RubyAres`
-* rename `RubyARES::Parser::ARESDatabaseError` and `RubyARES::Parser::ParseError` to `RubyAres::Error`
-* adjust `subject.attribute` calls to new structure
-
+- rename `RubyARES` to `RubyAres`
+- rename `RubyARES::Parser::ARESDatabaseError` and `RubyARES::Parser::ParseError` to `RubyAres::Error`
+- adjust `subject.attribute` calls to new structure
 
 ## Development
 
