@@ -1,6 +1,10 @@
 ## [Unreleased]
 
-# [0.3.0] - 2024-01-15
+# [0.4.0] - 2025-10-23
+
+- Update rexml dependency
+
+## [0.3.0] - 2024-01-15
 
 - Fix deprecation warning for `ostruct` usage
 

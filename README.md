@@ -9,7 +9,7 @@ This gem is not implementing whole ARES API, only the part that allow to get inf
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "ruby_ares", "~> 0.3.0", github: "railsformers/ruby_ares"
+gem "ruby_ares", "~> 0.4.0", github: "railsformers/ruby_ares"
 ```
 
 ## Usage
