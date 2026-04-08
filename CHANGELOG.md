@@ -1,5 +1,12 @@
 ## [Unreleased]
 
+# [0.5.0] - 2026-04-08
+
+- Update addressable dependency
+- Update gemspec dependencies
+- Remove 2.x from travis.yml
+- Update gems to latest versions
+
 # [0.4.0] - 2025-10-23
 
 - Update rexml dependency
