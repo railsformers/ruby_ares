@@ -1,13 +1,13 @@
 PATH
   remote: .
   specs:
-    ruby_ares (0.5.0)
+    ruby_ares (0.5.1)
       ostruct
 
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.9.0)
+    addressable (2.9.1)
       public_suffix (>= 2.0.2, < 8.0)
     bigdecimal (4.1.1)
     crack (1.0.1)

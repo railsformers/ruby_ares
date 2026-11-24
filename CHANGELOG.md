@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+# [0.5.1] - 2026-11-24
+
+- Update addressable dependency to 2.9.1
+
 # [0.5.0] - 2026-04-08
 
 - Update addressable dependency
